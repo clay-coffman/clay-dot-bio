@@ -1,15 +1,19 @@
 {
   "name": "clay-dot-bio",
-  "version": "1.0.50",
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun --watch src/index.tsx",
+    "build": "bun build src/index.tsx --outdir ./dist --target node",
+    "start": "bun run dist/index.js"
   },
   "dependencies": {
-    "elysia": "latest"
+    "elysia": "latest",
+    "@elysiajs/html": "latest",
+    "@elysiajs/static": "latest"
   },
   "devDependencies": {
-    "bun-types": "latest"
-  },
-  "module": "src/index.js"
+    "bun-types": "latest",
+    "@types/node": "latest"
+  }
 }
